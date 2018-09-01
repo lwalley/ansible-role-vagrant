@@ -1,0 +1,5 @@
+---
+- name: Ensure vagrant plugins are installed.
+  command: "vagrant plugin install {{ item }}"
+  with_items: "{{ vagrant_plugins }}"
+  when: vagrant_plugins is defined
